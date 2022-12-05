@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="p-3 mb-2 bg-primary text-white"><h2><b><center>TODAY TASK APPLICATION
+                </center></b></h2></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="shadow card">
+                <div class="card-body">
+
+
+                    <h5 class="card-title">{{i.Take_name}}</h5>
+                    <p> {{i.priority}}</p>
+                    <p> {{i.date}}</p>
+                    <a class="btn btn-danger" href="{% url 'todoapp:delete' i.id %}">Done</a>
+                    <a class="btn btn-success" href="{% url 'todoapp:update' i.id %}">update</a>
+
+                </div>
+            </div>
+
+
+{% endblock %}
